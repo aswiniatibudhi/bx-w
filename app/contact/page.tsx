@@ -22,12 +22,6 @@ const contactInfo = [
     value: "(650) 305-1682",
     href: "tel:+16503051682",
   },
-  {
-    icon: MapPin,
-    title: "Headquarters",
-    value: "San Francisco, CA",
-    href: "#",
-  },
 ]
 
 export default function ContactPage() {
@@ -218,6 +212,31 @@ export default function ContactPage() {
                     </div>
                   </a>
                 ))}
+
+                <div
+                  id="locations"
+                  className="rounded-2xl border border-border bg-card p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <MapPin className="h-6 w-6" />
+                    </div>
+                    <div className="space-y-4">
+                      <div>
+                        <div className="font-semibold">HeadQuarter</div>
+                        <div className="mt-1 text-muted-foreground">San Francisco</div>
+                      </div>
+                      <div>
+                        <div className="font-semibold">Branch offices</div>
+                        <ul className="mt-2 space-y-1 text-muted-foreground">
+                          <li>Bangalore</li>
+                          <li>Bhubaneswar</li>
+                          <li>Canada</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-6">
