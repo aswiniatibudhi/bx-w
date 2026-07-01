@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "1 (408) 662 - 5674",
-    href: "tel:+14086625674",
+    value: "(650) 305-1682",
+    href: "tel:+16503051682",
   },
   {
     icon: MapPin,
