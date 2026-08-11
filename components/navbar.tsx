@@ -51,30 +51,35 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
-          : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 h-16 border-b border-border bg-background sm:h-20",
+        scrolled && "shadow-sm"
       )}
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/images/logo.png"
-                alt="BrightAxis AI"
-                width={56}
-                height={56}
-                className="h-12 w-12 sm:h-14 sm:w-14 shrink-0"
-              />
-              <span className="text-2xl font-bold tracking-tight sm:text-3xl">
+      <nav className="relative mx-auto h-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-full items-center justify-between">
+          <div className="flex min-w-0 items-center">
+            <Link
+              href="/"
+              className="flex min-w-0 items-center gap-2.5 leading-none sm:gap-3"
+            >
+              <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full sm:h-9 sm:w-9">
+                <Image
+                  src="/images/logo.png"
+                  alt=""
+                  width={36}
+                  height={36}
+                  aria-hidden
+                  className="absolute left-1/2 top-[-8%] h-[145%] w-[145%] max-w-none -translate-x-1/2 object-cover object-top"
+                />
+              </span>
+              <span className="truncate text-lg font-bold tracking-tight sm:text-2xl">
+                <span className="sr-only">BrightAxis AI - </span>
                 Bright<span className="text-primary">Axis</span>
               </span>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+        {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:gap-1">
             {navigation.map((item) =>
               item.children ? (
@@ -163,7 +168,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-xl">
+          <div className="absolute left-0 right-0 top-full border-t border-border bg-background shadow-lg lg:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <React.Fragment key={item.name}>

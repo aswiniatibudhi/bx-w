@@ -12,6 +12,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Navbar />
+      <div aria-hidden className="h-16 shrink-0 sm:h-20" />
       <HeroSection />
       <ServicesSection />
       <WhyBrightAxisSection />

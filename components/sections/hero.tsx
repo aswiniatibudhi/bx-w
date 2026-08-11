@@ -67,7 +67,7 @@ export function HeroSection() {
   )
 
   return (
-    <section className="relative w-full overflow-hidden pt-16">
+    <section className="relative w-full overflow-hidden">
       <Carousel
         setApi={setApi}
         opts={{
